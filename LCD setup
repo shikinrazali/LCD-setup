@@ -1,0 +1,17 @@
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C address 0x27, 20 column and 4 rows
+
+void setup() {
+  lcd.init(); // Initialize the LCD I2C display
+  lcd.backlight();
+
+  lcd.setCursor(0, 0);            // move cursor the 1st row
+  lcd.print("hi hello");          // print message at the 1st row
+  lcd.setCursor(0, 1);            // move cursor to the 2nd row
+  lcd.print("IoT sensors"); // print message at the 2nd row
+ 
+}
+
+void loop() {
+}
